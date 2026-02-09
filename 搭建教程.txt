@@ -87,7 +87,7 @@ hoproxy代理host伪装混淆域名 转接openvpn 这个代理和openvpn部署�
 
 
 下载
-wget https://github.com/user-attachments/files/24693197/hoproxy.c.zip
+wget https://github.com/user-attachments/files/25179289/hoproxy.zip
 
  
 解压
