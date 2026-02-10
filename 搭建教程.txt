@@ -4,7 +4,7 @@ ubuntu20搭建
 
 不要翻译为中文
 
-curl -fsSL https://get.docker.com | bash
+
 
 国内安装docker
 如果安装最新版，直接输入如下命令即可
@@ -87,7 +87,7 @@ hoproxy代理host伪装混淆域名 转接openvpn 这个代理和openvpn部署�
 
 
 下载
-wget https://github.com/user-attachments/files/25179289/hoproxy.zip
+wget 
 
  
 解压
