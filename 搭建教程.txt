@@ -98,10 +98,83 @@ apt install gcc socat -y
 
 本机转发代理到openvpn端口，可改其他
 
+
+编译
 gcc hoproxy.c -o hoproxy
 
+systemd守护进程
+mv hoproxy /usr/local/bin/hoproxy
 
-./hoproxy -l 80 -r 127.0.0.1:1194 -d
+
+
+nano /etc/systemd/system/hoproxy.service
+
+#复制进去
+
+
+
+[Unit]
+Description=Hoproxy Ultra-Violent Proxy Service
+# 确保在网络就绪后再启动
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# 注意：不要加 -d 参数，由 systemd 负责后台运行
+
+ExecStart=/usr/local/bin/hoproxy -l 80 -r 127.0.0.1:1194
+
+# 自动重启机制
+Restart=always
+RestartSec=3
+
+# 提高文件描述符限制，防止高并发时崩溃
+LimitNOFILE=1048576
+
+# 如果你想以非 root 用户运行（且端口 > 1024），可以取消下面两行的注释
+# User=nobody
+# Group=nogroup
+
+[Install]
+WantedBy=multi-user.target
+#结束
+
+
+
+
+
+
+开机启动
+sudo systemctl enable hoproxy
+
+运行
+sudo systemctl start hoproxy
+
+
+
+状态
+sudo systemctl status hoproxy
+
+
+停止
+sudo systemctl stop hoproxy
+
+
+重启
+sudo systemctl restart hoproxy
+
+
+
+
+
+
+
+
+
+
+
+
 
 如果1194端口为openvpn
 免流端口一般80或者8080
