@@ -92,6 +92,8 @@ wget https://github.com/user-attachments/files/25310734/hoproxy.zip
  
 解压
 unzip hoproxy.c.zip
+
+必须安装socat
 apt install gcc socat -y
 
 ###centos用 yum 安装
