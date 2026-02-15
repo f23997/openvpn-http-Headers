@@ -11,7 +11,13 @@ Can be used in countries with internet restrictions
 # -l 80    : Listen on local port 80
 # -r 127.0.0.1:1194 : Forward all incoming connections to localhost:1194 (local OpenVPN port)
 apt install gcc socat -y
+
+
+
 gcc hoproxy.c -o hoproxy
+
+
+
 ./hoproxy -d -l 80 -r 127.0.0.1:1194
 
 在国内可用
