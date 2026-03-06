@@ -25,10 +25,7 @@ gcc hoproxy.c -o hoproxy
 hoproxy会接受自定伪装域名端口，转发到指定的ip地址tcp端口
 
 客户端伪装host域名请求
-ssh openvpn都支持代理
-也能搭配proxytunnel 
--
-http-proxy的协议都可以使用
+
 
 搭建教程
 https://github.com/f23997/openvpn-Free-internet/blob/main/%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.txt
