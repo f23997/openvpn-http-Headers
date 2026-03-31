@@ -50,11 +50,11 @@ for i in {1..20}; do
     echo "ing......: $CLIENT"
     
     
-    docker run -v /data/openvpn:/etc/openvpn --rm kylemanna/openvpn \
+    docker run -v /data/openvpn:/etc/openvpn --rm kylemanna/openvpn:2.4 \
         easyrsa build-client-full "$CLIENT" nopass < /dev/null
     
     
-    docker run -v /data/openvpn:/etc/openvpn --rm kylemanna/openvpn \
+    docker run -v /data/openvpn:/etc/openvpn --rm kylemanna/openvpn:2.4 \
         ovpn_getclient "$CLIENT" > "clients/$CLIENT.ovpn"
 done
 
