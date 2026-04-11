@@ -1,10 +1,4 @@
-#Normal proxies send the real IP and port in the CONNECT request, while Hoproxy accepts any custom domain name + port, and forwards the connection to the specified target TCP address and port.
 
-User Guide https://github.com/f23997/openvpn-Free-internet/blob/main/%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B.txt
-
-openvpn http伪装
-Works in countries with internet censorship
-Can be used in countries with internet restrictions
 -
 
 # -d          : Run hoproxy in the background (detached/daemon mode)
